@@ -1,7 +1,16 @@
-# Tauri + SvelteKit + TypeScript
+# sve2-fe
 
-This template should help get you started developing with Tauri, SvelteKit and TypeScript in Vite.
+Frontend web editor for [sve2](https://github.com/btmxh/sve2).
 
-## Recommended IDE Setup
+## Build instructions
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+This uses the standard Tauri/pnpm setup, so go there for documentation.
+
+`sve2-fe` ships with its own preload Lua script for sve2, with dependencies:
+
+- [lua-cjson](https://github.com/mpx/lua-cjson)
+- [luv](https://github.com/luvit/luv)
+- [llhttp.lua](https://github.com/MunifTanjim/llhttp.lua)
+
+Currently, the preload script only starts a HTTP server for RPC, so one should
+run it with another preload script that actually renders stuff onto the screen.
