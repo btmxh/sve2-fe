@@ -100,6 +100,8 @@
     .playback-btns {
       display: flex;
       flex-direction: row;
+      justify-content: center;
+      align-items: center;
       gap: 0.25rem;
       padding: 0.1rem;
 
